@@ -1,0 +1,5 @@
+name: RpgPlugin
+version: '${project.version}'
+main: com.burchard36.RpgPlugin
+api-version: 1.17
+description: A RPG Stats plugin for minecraft
