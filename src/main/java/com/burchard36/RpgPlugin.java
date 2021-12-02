@@ -1,5 +1,6 @@
 package com.burchard36;
 
+import com.burchard36.commands.StatsCommand;
 import com.burchard36.config.ConfigManager;
 import com.burchard36.config.configs.DefaultConfig;
 import com.burchard36.data.DataManager;
@@ -19,6 +20,8 @@ public final class RpgPlugin extends JavaPlugin implements Api {
 
         this.configManager = new ConfigManager(this);
         this.dataManager = new DataManager(this);
+
+        ApiLib.registerCommand(new StatsCommand(this).getCommand());
     }
 
     @Override

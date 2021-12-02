@@ -78,7 +78,7 @@
         <dependency>
             <groupId>com.github.Burchard36</groupId>
             <artifactId>BurchAPI</artifactId>
-            <version>01-AC-02</version>
+            <version>01-AC-05</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

@@ -38,9 +38,12 @@ public class StatsCommand {
                     }
 
                     final StatsGui gui = new StatsGui(this.plugin);
+                    gui.showTo(data);
                 });
     }
 
-
+    public final ApiCommand getCommand() {
+        return this.command;
+    }
 
 }

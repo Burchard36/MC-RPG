@@ -22,7 +22,7 @@ public class DataManager {
         this.plugin = plugin;
         this.events = new PlayerDataEvents(this);
         this.dataMap = this.plugin.getLib().getPluginDataManager().createNewMap();
-        this.plugin.getLib().getPluginDataManager().registerPluginMap(Datas.ADD, this.dataMap);
+        this.plugin.getLib().getPluginDataManager().registerPluginMap(Datas.DATA, this.dataMap);
 
         Logger.log("Loading all available data files. . .");
         this.loadPlayerData();

@@ -26,16 +26,26 @@ public class StatsGui {
 
     public StatsGui(final RpgPlugin plugin) {
         this.plugin = plugin;
-        this.inventory = new PluginInventory(32, "&e&lYour stats");
+        this.inventory = new PluginInventory(27, "&e&lYour stats");
     }
 
     public final void showTo(final JsonPlayerData data) {
+        final ClickableItem backgroundItem = this.backgroundItem();
         final ClickableItem strengthItem = this.strengthClickableItem(data);
+
+        this.inventory
+                .onClick((onClick) -> {
+                    onClick.setCancelled(true);
+                })
+                .fillWith(backgroundItem)
+                .addClickableItemAtSlot(10, strengthItem)
+                .open(data.getPlayer());
     }
 
     private ClickableItem backgroundItem() {
         final ItemWrapper wrapper = new ItemWrapper(new ItemStack(Material.BLACK_STAINED_GLASS_PANE));
         wrapper.setDisplayName("&f ");
+        return new ClickableItem(wrapper);
     }
 
     private ClickableItem strengthClickableItem(final JsonPlayerData data) {
